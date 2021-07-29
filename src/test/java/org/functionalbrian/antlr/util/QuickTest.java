@@ -38,6 +38,15 @@ public class QuickTest {
 		Trees.save(work, elp, testString.substring(0, Math.min(10, testString.length())).replaceAll("[\\s\\/]+", "") + ".ps");
 	}
 
+	@Test
+	public void why3() throws PrintException, IOException {
+		String testString = "testing<br";
+		HelloParser elp = parserUtil.parseString(testString);
+		ParserRuleContext work = elp.testTre();
+		Trees.save(work, elp, testString.substring(0, Math.min(10, testString.length())).replaceAll("[\\s\\/]+", "") + ".ps");
+	}
+
+
 
 	private void writePS(String testString) throws IOException, PrintException {
 		HelloParser elp = parserUtil.parseString(testString);

@@ -5,7 +5,7 @@
 plugins {
     id 'java-library'
     id 'java'
-    id 'antlr'
+
 }
 
 repositories {
