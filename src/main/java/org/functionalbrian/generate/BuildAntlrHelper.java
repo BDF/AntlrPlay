@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 public class BuildAntlrHelper {
 	public static void main(String [] args) {
 		final BuildAntlrHelper mbp = new BuildAntlrHelper();
-		mbp.generateTestCode();
+		mbp.generateCode(mbp.helloWorldOptions());
 	}
 
 	public class OptionBuilder {
@@ -75,15 +75,11 @@ public class BuildAntlrHelper {
 		return buildOptions(packageName, grammar);
 	}
 
-	public void generateTestCode() {
-		final String[] options = testOptions();
-		generateCode(options);
-	}
-
 	private void generateCode(String[] options) {
 		Tool tool = new Tool(options);
 		tool.processGrammarsOnCommandLine();
 	}
+
 
 
 	private String[] testOptions() {

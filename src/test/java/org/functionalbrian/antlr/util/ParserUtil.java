@@ -86,7 +86,7 @@ public class ParserUtil<P extends  Parser, L extends Lexer> {
 		return parser;
 	}
 
-	public  void writePostScript(Tree prc, String name) {
+	public  void writePostScript(Tree prc) {
 		try {
 			Trees.save(prc, parser, "testing.ps");
 		} catch (IOException | PrintException e) {
