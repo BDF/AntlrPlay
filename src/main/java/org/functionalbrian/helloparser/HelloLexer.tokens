@@ -1,5 +1,5 @@
 TERM=1
 BR_OP=2
 BR_OP2=3
-SLASH=4
-'/'=4
+LT=4
+'<'=4

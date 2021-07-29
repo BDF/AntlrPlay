@@ -17,7 +17,7 @@ public class HelloLexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		TERM=1, BR_OP=2, BR_OP2=3, SLASH=4;
+		TERM=1, BR_OP=2, BR_OP2=3, LT=4;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -28,20 +28,20 @@ public class HelloLexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"TERM", "BR_OP", "BR_OP2", "SLASH"
+			"TERM", "BR_OP", "BR_OP2", "LT"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, null, null, "'/'"
+			null, null, null, null, "'<'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "TERM", "BR_OP", "BR_OP2", "SLASH"
+			null, "TERM", "BR_OP", "BR_OP2", "LT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -112,8 +112,8 @@ public class HelloLexer extends Lexer {
 		"\2\2\20\21\5\t\5\2\21\22\7d\2\2\22\23\7t\2\2\23\33\3\2\2\2\24\25\7D\2"+
 		"\2\25\33\7t\2\2\26\27\7d\2\2\27\33\7T\2\2\30\31\7D\2\2\31\33\7T\2\2\32"+
 		"\20\3\2\2\2\32\24\3\2\2\2\32\26\3\2\2\2\32\30\3\2\2\2\33\6\3\2\2\2\34"+
-		"\35\5\t\5\2\35\36\t\3\2\2\36\37\t\4\2\2\37\b\3\2\2\2 !\7\61\2\2!\n\3\2"+
-		"\2\2\5\2\16\32\2";
+		"\35\5\t\5\2\35\36\t\3\2\2\36\37\t\4\2\2\37\b\3\2\2\2 !\7>\2\2!\n\3\2\2"+
+		"\2\5\2\16\32\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

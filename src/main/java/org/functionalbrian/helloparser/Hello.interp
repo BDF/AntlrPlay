@@ -3,14 +3,14 @@ null
 null
 null
 null
-'/'
+'<'
 
 token symbolic names:
 null
 TERM
 BR_OP
 BR_OP2
-SLASH
+LT
 
 rule names:
 testOne

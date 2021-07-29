@@ -17,7 +17,7 @@ public class HelloParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		TERM=1, BR_OP=2, BR_OP2=3, SLASH=4;
+		TERM=1, BR_OP=2, BR_OP2=3, LT=4;
 	public static final int
 		RULE_testOne = 0, RULE_testTwo = 1;
 	private static String[] makeRuleNames() {
@@ -29,13 +29,13 @@ public class HelloParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, null, null, "'/'"
+			null, null, null, null, "'<'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "TERM", "BR_OP", "BR_OP2", "SLASH"
+			null, "TERM", "BR_OP", "BR_OP2", "LT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();

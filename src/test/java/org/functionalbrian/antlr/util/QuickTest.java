@@ -23,7 +23,7 @@ public class QuickTest {
 
 	@Test
 	public void why() throws PrintException, IOException {
-		String testString = "testing/br";
+		String testString = "testing<br";
 		HelloParser elp = parserUtil.parseString(testString);
 		ParserRuleContext work = elp.testOne();
 		Trees.save(work, elp, testString.substring(0, Math.min(10, testString.length())).replaceAll("[\\s\\/]+", "") + ".ps");
@@ -32,7 +32,7 @@ public class QuickTest {
 
 	@Test
 	public void why2() throws PrintException, IOException {
-		String testString = "testing/br";
+		String testString = "testing<br";
 		HelloParser elp = parserUtil.parseString(testString);
 		ParserRuleContext work = elp.testTwo();
 		Trees.save(work, elp, testString.substring(0, Math.min(10, testString.length())).replaceAll("[\\s\\/]+", "") + ".ps");
