@@ -17,7 +17,7 @@ public class HelloParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		TERM=1, BR_OP=2, BR_OP2=3, BR_OP3=4, LT=5;
+		TERM=1, BR_OP2=2, BR_OP3=3, BR_OP=4, LT=5;
 	public static final int
 		RULE_testOne = 0, RULE_testTwo = 1, RULE_testTre = 2;
 	private static String[] makeRuleNames() {
@@ -35,7 +35,7 @@ public class HelloParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "TERM", "BR_OP", "BR_OP2", "BR_OP3", "LT"
+			null, "TERM", "BR_OP2", "BR_OP3", "BR_OP", "LT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -227,8 +227,8 @@ public class HelloParser extends Parser {
 	public static final String _serializedATN =
 		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\7\22\4\2\t\2\4\3"+
 		"\t\3\4\4\t\4\3\2\3\2\3\2\3\3\3\3\3\3\3\4\3\4\3\4\3\4\2\2\5\2\4\6\2\2\2"+
-		"\16\2\b\3\2\2\2\4\13\3\2\2\2\6\16\3\2\2\2\b\t\7\3\2\2\t\n\7\4\2\2\n\3"+
-		"\3\2\2\2\13\f\7\3\2\2\f\r\7\5\2\2\r\5\3\2\2\2\16\17\7\3\2\2\17\20\7\6"+
+		"\16\2\b\3\2\2\2\4\13\3\2\2\2\6\16\3\2\2\2\b\t\7\3\2\2\t\n\7\6\2\2\n\3"+
+		"\3\2\2\2\13\f\7\3\2\2\f\r\7\4\2\2\r\5\3\2\2\2\16\17\7\3\2\2\17\20\7\5"+
 		"\2\2\20\7\3\2\2\2\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());

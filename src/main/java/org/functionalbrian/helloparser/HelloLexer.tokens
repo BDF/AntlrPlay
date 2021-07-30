@@ -1,6 +1,6 @@
 TERM=1
-BR_OP=2
-BR_OP2=3
-BR_OP3=4
+BR_OP2=2
+BR_OP3=3
+BR_OP=4
 LT=5
 '<'=5
